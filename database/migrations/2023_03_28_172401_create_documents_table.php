@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('documents', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id();            
             $table->bigInteger('category_id');
             $table->string('title', 60);
             $table->text('contents');
+            $table->timestamps(); // para organizar melhor procuro deixar as datas para o final
 
             $table->foreign('category_id')
                 ->references('id')
