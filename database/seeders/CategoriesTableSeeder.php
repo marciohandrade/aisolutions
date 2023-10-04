@@ -13,6 +13,10 @@ class CategoriesTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
+
+   
+     //Apenas com poucos registros
+    //-----------------------------------------
     public function run(): void
     {
         DB::table('categories')->insert([
