@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/importar', [JsonImportController::class, 'import']);
+
+Route::view('/pagina-job', 'iniciarjob');
+
+
+ 
