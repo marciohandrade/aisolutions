@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 20);            
             $table->timestamps();
-            $table->string('name', 20);
+            
         });
     }
 
@@ -25,4 +26,6 @@ return new class extends Migration
     {
         Schema::dropIfExists('categories');
     }
+
+    
 };

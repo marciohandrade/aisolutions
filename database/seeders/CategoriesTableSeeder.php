@@ -2,31 +2,36 @@
 
 namespace Database\Seeders;
 
+
+//use Illuminate\Database\Console\Seeds\WithoutModelEvents; // naõ esta sendo utilizado
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class CategorySeeder extends Seeder
+
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
 
+   
+     //Apenas com poucos registros
+    //-----------------------------------------
     public function run(): void
     {
-        $currentDate = Carbon::now();
-
-         // versão inserindo grande quantidade de registros
-         // i = quantidade de registros a serem inseridos
-         
-        /*  for ($i = 1; $i <= 10; $i++) {
+        $currentDate = Carbon::now();        
+        
+        // versão muitos registros de uma vez só.
+       /*  for ($i = 1; $i <= 10; $i++) {
             DB::table('categories')->insert([
-                'name' => 'Remessa ' . $i,
+                'name' => 'Remessa ' . $i,                
                 'created_at' => $currentDate->format('d-m-Y H:i:s'),
                 'updated_at' => null, // inserindo como null
             ]);
         } */
 
+        // versão 1
         DB::table('categories')->insert([
             'name' => 'Remessa Parcial',
             'created_at' => Carbon::now(), // formato data padrão
